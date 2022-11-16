@@ -13,7 +13,13 @@ const Characters = () => {
 
     return (
         <div className='Characters'>
-            {characters.map((character, index)=><p key={index}>{character.name}</p>)}
+            {characters.map((character, index)=>(
+            <div>
+                <p key={index}>{character.name}</p>
+                <p>{character.species}</p>
+                <p>-------------------</p>
+            </div>
+            ))}
         </div>
     );
 }
